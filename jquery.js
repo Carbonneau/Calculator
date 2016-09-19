@@ -1,13 +1,7 @@
 /* global $ */
 
-function makeColour() {
-    var text = "#";
-    var possible = "ABCDEF";
 
-    for (var i = 0; i < 6; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    return text;
-}
+
 
 $(document).ready(function() {
 
@@ -124,6 +118,7 @@ $(document).ready(function() {
             var rightVal;
             var leftOrRight = 'left';
             var subTotal;
+            //go throught the array left to right adding and subtracting along the way
             var calculated = array.reduce(function(prev, curr) {
                 if (curr === 'NO') {
                     return prev;
@@ -157,7 +152,8 @@ $(document).ready(function() {
                 }
                 return prev;
             }, '');
-
+            
+            //handle the last item in the array 
             switch (currOp) {
                 case '+':
                     return parseFloat(leftVal,10) + parseFloat(calculated,10);
@@ -179,7 +175,8 @@ $(document).ready(function() {
             $("#display").text(displayResult);
         }
     });
-
+    
+    //make the buttons change color
     $(".buttons").children().on({
         mouseover: function(event) {
             var colour = makeColour();
@@ -190,7 +187,7 @@ $(document).ready(function() {
         }
     });
     
-    
+    //handle the keypresses
     $(document).keypress(function(event){
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 49) {
@@ -234,3 +231,14 @@ $(document).ready(function() {
 
 
 });
+
+
+//returns a random light pastelly color
+function makeColour() {
+    var text = "#";
+    var possible = "ABCDEF";
+
+    for (var i = 0; i < 6; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+}

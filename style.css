@@ -3,7 +3,7 @@
     height: 2.5em;
     border: 1px solid black;
     line-height: 3em;
-    font-family: serif;
+    font-family: sans-serif;
     font-size: 2em;
     color: #555;
     text-align: right;
@@ -35,5 +35,6 @@
 .calculator {
     width: auto;
     height: auto;
+    max-width: 500px;
 }
 
