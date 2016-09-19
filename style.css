@@ -1,0 +1,39 @@
+#display {
+    width: auto; 
+    height: 2.5em;
+    border: 1px solid black;
+    line-height: 3em;
+    font-family: serif;
+    font-size: 2em;
+    color: #555;
+    text-align: right;
+    padding: none;
+}
+
+.buttons a{
+    height: 1.5em;
+    width: 1.5em;
+    border:1px solid black;
+    padding: 1em;
+    margin: .5em;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 1.5em;
+    font-family: sans-serif;
+    color: #555
+    
+}
+
+
+.buttons{
+    width:auto;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.calculator {
+    width: auto;
+    height: auto;
+}
+
